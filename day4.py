@@ -6,7 +6,7 @@ def hash_function():
     start = 1
     result = input + str(start)
     hex_value = hashlib.md5(result.encode()).hexdigest()
-    while str(hex_value[:6]) != "000000":
+    while hex_value[:5] != "00000":
         start +=1
         result = input + str(start)
         hex_value = hashlib.md5(result.encode()).hexdigest()
